@@ -1,0 +1,8 @@
+com/exemplo/api/repository/VeiculoRepository.class
+com/exemplo/api/repository/ServicoRepository.class
+com/exemplo/api/entity/Servico.class
+com/exemplo/api/service/ServicoService.class
+com/exemplo/api/service/VeiculoService.class
+com/exemplo/api/entity/Veiculo.class
+com/exemplo/api/controller/VeiculoController.class
+com/exemplo/api/controller/ServicoController.class

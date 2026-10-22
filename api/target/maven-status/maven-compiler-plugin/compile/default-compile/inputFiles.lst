@@ -1,0 +1,9 @@
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/ApiApplication.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/controller/ServicoController.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/controller/VeiculoController.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/entity/Servico.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/entity/Veiculo.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/repository/ServicoRepository.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/repository/VeiculoRepository.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/service/ServicoService.java
+/Users/guio_o/Desktop/Codigos_Java/api/src/main/java/com/example/api/service/VeiculoService.java

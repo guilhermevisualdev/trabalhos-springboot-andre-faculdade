@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Agendamento</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h2>Cadastrar Agendamento</h2>
+
+    <div th:if="${erro}" class="alert alert-danger" th:text="${erro}"></div>
+
+    <form th:action="@{/agendamentos}" th:object="${agenda}" method="post">
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="mb-3">
+            <label class="form-label">Cliente *</label>
+            <select class="form-select" th:field="*{cliente.id}" required>
+                <option value="">Selecione um cliente</option>
+                <option th:each="c : ${clientes}" 
+                        th:value="${c.id}" 
+                        th:text="${c.nome}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Serviço *</label>
+            <select class="form-select" th:field="*{servico.id}" required>
+                <option value="">Selecione um serviço</option>
+                <option th:each="s : ${servicos}" 
+                        th:value="${s.id}" 
+                        th:text="${s.nome + ' (R$ ' + s.valor + ')'}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Usuário Responsável *</label>
+            <select class="form-select" th:field="*{usuario.id}" required>
+                <option value="">Selecione o usuário</option>
+                <option th:each="u : ${usuarios}" 
+                        th:value="${u.id}" 
+                        th:text="${u.usuario}">
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Data e Hora *</label>
+            <input type="datetime-local" class="form-control" th:field="*{data}" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Descrição</label>
+            <input type="text" class="form-control" th:field="*{descricao}" placeholder="Detalhes do agendamento" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Salvar Agendamento</button>
+        <a href="/agendamentos" class="btn btn-secondary">Voltar</a>
+    </form>
+
+</body>
+</html>
